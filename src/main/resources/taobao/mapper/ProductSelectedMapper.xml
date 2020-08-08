@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.najia.quan.taobao.mapper.ProductSelectedMapper" >
+  <resultMap id="BaseResultMap" type="com.najia.quan.taobao.model.ProductSelected" >
+    <id column="selected_id" property="selectedId" jdbcType="INTEGER" />
+    <result column="category_id" property="categoryId" jdbcType="BIGINT" />
+    <result column="category_name" property="categoryName" jdbcType="VARCHAR" />
+    <result column="click_url" property="clickUrl" jdbcType="VARCHAR" />
+    <result column="commission_rate" property="commissionRate" jdbcType="VARCHAR" />
+    <result column="coupon_amount" property="couponAmount" jdbcType="BIGINT" />
+    <result column="coupon_end_time" property="couponEndTime" jdbcType="VARCHAR" />
+    <result column="coupon_info" property="couponInfo" jdbcType="VARCHAR" />
+    <result column="coupon_remain_count" property="couponRemainCount" jdbcType="BIGINT" />
+    <result column="coupon_share_url" property="couponShareUrl" jdbcType="VARCHAR" />
+    <result column="coupon_start_fee" property="couponStartFee" jdbcType="VARCHAR" />
+    <result column="coupon_start_time" property="couponStartTime" jdbcType="VARCHAR" />
+    <result column="coupon_total_count" property="couponTotalCount" jdbcType="BIGINT" />
+    <result column="favorites_info" property="favoritesInfo" jdbcType="INTEGER" />
+    <result column="item_description" property="itemDescription" jdbcType="VARCHAR" />
+    <result column="item_id" property="itemId" jdbcType="BIGINT" />
+    <result column="jdd_num" property="jddNum" jdbcType="BIGINT" />
+    <result column="jdd_price" property="jddPrice" jdbcType="VARCHAR" />
+    <result column="jhs_price_usp_list" property="jhsPriceUspList" jdbcType="VARCHAR" />
+    <result column="ju_online_end_time" property="juOnlineEndTime" jdbcType="VARCHAR" />
+    <result column="ju_online_start_time" property="juOnlineStartTime" jdbcType="VARCHAR" />
+    <result column="ju_play_end_time" property="juPlayEndTime" jdbcType="BIGINT" />
+    <result column="ju_play_start_time" property="juPlayStartTime" jdbcType="BIGINT" />
+    <result column="ju_pre_show_end_time" property="juPreShowEndTime" jdbcType="VARCHAR" />
+    <result column="ju_pre_show_start_time" property="juPreShowStartTime" jdbcType="VARCHAR" />
+    <result column="kuadian_promotion_info" property="kuadianPromotionInfo" jdbcType="VARCHAR" />
+    <result column="level_one_category_id" property="levelOneCategoryId" jdbcType="BIGINT" />
+    <result column="level_one_category_name" property="levelOneCategoryName" jdbcType="VARCHAR" />
+    <result column="lock_rate" property="lockRate" jdbcType="VARCHAR" />
+    <result column="lock_rate_end_time" property="lockRateEndTime" jdbcType="BIGINT" />
+    <result column="lock_rate_start_time" property="lockRateStartTime" jdbcType="BIGINT" />
+    <result column="maochao_play_conditions" property="maochaoPlayConditions" jdbcType="VARCHAR" />
+    <result column="maochao_play_discount_type" property="maochaoPlayDiscountType" jdbcType="VARCHAR" />
+    <result column="maochao_play_discounts" property="maochaoPlayDiscounts" jdbcType="VARCHAR" />
+    <result column="maochao_play_end_time" property="maochaoPlayEndTime" jdbcType="VARCHAR" />
+    <result column="maochao_play_free_post_fee" property="maochaoPlayFreePostFee" jdbcType="VARCHAR" />
+    <result column="maochao_play_start_time" property="maochaoPlayStartTime" jdbcType="VARCHAR" />
+    <result column="multi_coupon_item_count" property="multiCouponItemCount" jdbcType="VARCHAR" />
+    <result column="multi_coupon_zk_rate" property="multiCouponZkRate" jdbcType="VARCHAR" />
+    <result column="new_user_price" property="newUserPrice" jdbcType="VARCHAR" />
+    <result column="nick" property="nick" jdbcType="VARCHAR" />
+    <result column="oetime" property="oetime" jdbcType="VARCHAR" />
+    <result column="orig_price" property="origPrice" jdbcType="VARCHAR" />
+    <result column="ostime" property="ostime" jdbcType="VARCHAR" />
+    <result column="pict_url" property="pictUrl" jdbcType="VARCHAR" />
+    <result column="play_info" property="playInfo" jdbcType="VARCHAR" />
+    <result column="presale_deposit" property="presaleDeposit" jdbcType="VARCHAR" />
+    <result column="presale_discount_fee_text" property="presaleDiscountFeeText" jdbcType="VARCHAR" />
+    <result column="presale_end_time" property="presaleEndTime" jdbcType="BIGINT" />
+    <result column="presale_start_time" property="presaleStartTime" jdbcType="BIGINT" />
+    <result column="presale_tail_end_time" property="presaleTailEndTime" jdbcType="BIGINT" />
+    <result column="presale_tail_start_time" property="presaleTailStartTime" jdbcType="BIGINT" />
+    <result column="price_after_multi_coupon" property="priceAfterMultiCoupon" jdbcType="VARCHAR" />
+    <result column="promotion_condition" property="promotionCondition" jdbcType="VARCHAR" />
+    <result column="promotion_discount" property="promotionDiscount" jdbcType="VARCHAR" />
+    <result column="promotion_info" property="promotionInfo" jdbcType="VARCHAR" />
+    <result column="promotion_type" property="promotionType" jdbcType="VARCHAR" />
+    <result column="reserve_price" property="reservePrice" jdbcType="VARCHAR" />
+    <result column="sale_price" property="salePrice" jdbcType="VARCHAR" />
+    <result column="sell_num" property="sellNum" jdbcType="BIGINT" />
+    <result column="seller_id" property="sellerId" jdbcType="BIGINT" />
+    <result column="shop_title" property="shopTitle" jdbcType="VARCHAR" />
+    <result column="short_title" property="shortTitle" jdbcType="VARCHAR" />
+    <result column="small_images" property="smallImages" jdbcType="VARCHAR" />
+    <result column="stock" property="stock" jdbcType="BIGINT" />
+    <result column="sub_title" property="subTitle" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="tmall_play_activity_end_time" property="tmallPlayActivityEndTime" jdbcType="BIGINT" />
+    <result column="tmall_play_activity_info" property="tmallPlayActivityInfo" jdbcType="VARCHAR" />
+    <result column="tmall_play_activity_start_time" property="tmallPlayActivityStartTime" jdbcType="BIGINT" />
+    <result column="total_stock" property="totalStock" jdbcType="BIGINT" />
+    <result column="user_type" property="userType" jdbcType="BIGINT" />
+    <result column="uv_sum_pre_sale" property="uvSumPreSale" jdbcType="BIGINT" />
+    <result column="volume" property="volume" jdbcType="BIGINT" />
+    <result column="white_image" property="whiteImage" jdbcType="VARCHAR" />
+    <result column="word_list" property="wordList" jdbcType="VARCHAR" />
+    <result column="x_id" property="xId" jdbcType="VARCHAR" />
+    <result column="ysyl_click_url" property="ysylClickUrl" jdbcType="VARCHAR" />
+    <result column="ysyl_commission_rate" property="ysylCommissionRate" jdbcType="VARCHAR" />
+    <result column="ysyl_tlj_face" property="ysylTljFace" jdbcType="VARCHAR" />
+    <result column="ysyl_tlj_send_time" property="ysylTljSendTime" jdbcType="VARCHAR" />
+    <result column="ysyl_tlj_use_end_time" property="ysylTljUseEndTime" jdbcType="VARCHAR" />
+    <result column="ysyl_tlj_use_start_time" property="ysylTljUseStartTime" jdbcType="VARCHAR" />
+    <result column="zk_final_price" property="zkFinalPrice" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="BIGINT" />
+    <result column="update_time" property="updateTime" jdbcType="BIGINT" />
+    <result column="material_id" property="materialId" jdbcType="BIGINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    selected_id, category_id, category_name, click_url, commission_rate, coupon_amount, 
+    coupon_end_time, coupon_info, coupon_remain_count, coupon_share_url, coupon_start_fee, 
+    coupon_start_time, coupon_total_count, favorites_info, item_description, item_id, 
+    jdd_num, jdd_price, jhs_price_usp_list, ju_online_end_time, ju_online_start_time, 
+    ju_play_end_time, ju_play_start_time, ju_pre_show_end_time, ju_pre_show_start_time, 
+    kuadian_promotion_info, level_one_category_id, level_one_category_name, lock_rate, 
+    lock_rate_end_time, lock_rate_start_time, maochao_play_conditions, maochao_play_discount_type, 
+    maochao_play_discounts, maochao_play_end_time, maochao_play_free_post_fee, maochao_play_start_time, 
+    multi_coupon_item_count, multi_coupon_zk_rate, new_user_price, nick, oetime, orig_price, 
+    ostime, pict_url, play_info, presale_deposit, presale_discount_fee_text, presale_end_time, 
+    presale_start_time, presale_tail_end_time, presale_tail_start_time, price_after_multi_coupon, 
+    promotion_condition, promotion_discount, promotion_info, promotion_type, reserve_price, 
+    sale_price, sell_num, seller_id, shop_title, short_title, small_images, stock, sub_title, 
+    title, tmall_play_activity_end_time, tmall_play_activity_info, tmall_play_activity_start_time, 
+    total_stock, user_type, uv_sum_pre_sale, volume, white_image, word_list, x_id, ysyl_click_url, 
+    ysyl_commission_rate, ysyl_tlj_face, ysyl_tlj_send_time, ysyl_tlj_use_end_time, ysyl_tlj_use_start_time, 
+    zk_final_price, create_time, update_time, material_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from product_selected
+    where selected_id = #{selectedId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from product_selected
+    where selected_id = #{selectedId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.najia.quan.taobao.model.ProductSelected" >
+    insert into product_selected (selected_id, category_id, category_name, 
+      click_url, commission_rate, coupon_amount, 
+      coupon_end_time, coupon_info, coupon_remain_count, 
+      coupon_share_url, coupon_start_fee, coupon_start_time, 
+      coupon_total_count, favorites_info, item_description, 
+      item_id, jdd_num, jdd_price, 
+      jhs_price_usp_list, ju_online_end_time, ju_online_start_time, 
+      ju_play_end_time, ju_play_start_time, ju_pre_show_end_time, 
+      ju_pre_show_start_time, kuadian_promotion_info, 
+      level_one_category_id, level_one_category_name, 
+      lock_rate, lock_rate_end_time, lock_rate_start_time, 
+      maochao_play_conditions, maochao_play_discount_type, 
+      maochao_play_discounts, maochao_play_end_time, 
+      maochao_play_free_post_fee, maochao_play_start_time, 
+      multi_coupon_item_count, multi_coupon_zk_rate, 
+      new_user_price, nick, oetime, 
+      orig_price, ostime, pict_url, 
+      play_info, presale_deposit, presale_discount_fee_text, 
+      presale_end_time, presale_start_time, presale_tail_end_time, 
+      presale_tail_start_time, price_after_multi_coupon, 
+      promotion_condition, promotion_discount, 
+      promotion_info, promotion_type, reserve_price, 
+      sale_price, sell_num, seller_id, 
+      shop_title, short_title, small_images, 
+      stock, sub_title, title, 
+      tmall_play_activity_end_time, tmall_play_activity_info, 
+      tmall_play_activity_start_time, total_stock, user_type, 
+      uv_sum_pre_sale, volume, white_image, 
+      word_list, x_id, ysyl_click_url, 
+      ysyl_commission_rate, ysyl_tlj_face, ysyl_tlj_send_time, 
+      ysyl_tlj_use_end_time, ysyl_tlj_use_start_time, 
+      zk_final_price, create_time, update_time, 
+      material_id)
+    values (#{selectedId,jdbcType=INTEGER}, #{categoryId,jdbcType=BIGINT}, #{categoryName,jdbcType=VARCHAR}, 
+      #{clickUrl,jdbcType=VARCHAR}, #{commissionRate,jdbcType=VARCHAR}, #{couponAmount,jdbcType=BIGINT}, 
+      #{couponEndTime,jdbcType=VARCHAR}, #{couponInfo,jdbcType=VARCHAR}, #{couponRemainCount,jdbcType=BIGINT}, 
+      #{couponShareUrl,jdbcType=VARCHAR}, #{couponStartFee,jdbcType=VARCHAR}, #{couponStartTime,jdbcType=VARCHAR}, 
+      #{couponTotalCount,jdbcType=BIGINT}, #{favoritesInfo,jdbcType=INTEGER}, #{itemDescription,jdbcType=VARCHAR}, 
+      #{itemId,jdbcType=BIGINT}, #{jddNum,jdbcType=BIGINT}, #{jddPrice,jdbcType=VARCHAR}, 
+      #{jhsPriceUspList,jdbcType=VARCHAR}, #{juOnlineEndTime,jdbcType=VARCHAR}, #{juOnlineStartTime,jdbcType=VARCHAR}, 
+      #{juPlayEndTime,jdbcType=BIGINT}, #{juPlayStartTime,jdbcType=BIGINT}, #{juPreShowEndTime,jdbcType=VARCHAR}, 
+      #{juPreShowStartTime,jdbcType=VARCHAR}, #{kuadianPromotionInfo,jdbcType=VARCHAR}, 
+      #{levelOneCategoryId,jdbcType=BIGINT}, #{levelOneCategoryName,jdbcType=VARCHAR}, 
+      #{lockRate,jdbcType=VARCHAR}, #{lockRateEndTime,jdbcType=BIGINT}, #{lockRateStartTime,jdbcType=BIGINT}, 
+      #{maochaoPlayConditions,jdbcType=VARCHAR}, #{maochaoPlayDiscountType,jdbcType=VARCHAR}, 
+      #{maochaoPlayDiscounts,jdbcType=VARCHAR}, #{maochaoPlayEndTime,jdbcType=VARCHAR}, 
+      #{maochaoPlayFreePostFee,jdbcType=VARCHAR}, #{maochaoPlayStartTime,jdbcType=VARCHAR}, 
+      #{multiCouponItemCount,jdbcType=VARCHAR}, #{multiCouponZkRate,jdbcType=VARCHAR}, 
+      #{newUserPrice,jdbcType=VARCHAR}, #{nick,jdbcType=VARCHAR}, #{oetime,jdbcType=VARCHAR}, 
+      #{origPrice,jdbcType=VARCHAR}, #{ostime,jdbcType=VARCHAR}, #{pictUrl,jdbcType=VARCHAR}, 
+      #{playInfo,jdbcType=VARCHAR}, #{presaleDeposit,jdbcType=VARCHAR}, #{presaleDiscountFeeText,jdbcType=VARCHAR}, 
+      #{presaleEndTime,jdbcType=BIGINT}, #{presaleStartTime,jdbcType=BIGINT}, #{presaleTailEndTime,jdbcType=BIGINT}, 
+      #{presaleTailStartTime,jdbcType=BIGINT}, #{priceAfterMultiCoupon,jdbcType=VARCHAR}, 
+      #{promotionCondition,jdbcType=VARCHAR}, #{promotionDiscount,jdbcType=VARCHAR}, 
+      #{promotionInfo,jdbcType=VARCHAR}, #{promotionType,jdbcType=VARCHAR}, #{reservePrice,jdbcType=VARCHAR}, 
+      #{salePrice,jdbcType=VARCHAR}, #{sellNum,jdbcType=BIGINT}, #{sellerId,jdbcType=BIGINT}, 
+      #{shopTitle,jdbcType=VARCHAR}, #{shortTitle,jdbcType=VARCHAR}, #{smallImages,jdbcType=VARCHAR}, 
+      #{stock,jdbcType=BIGINT}, #{subTitle,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, 
+      #{tmallPlayActivityEndTime,jdbcType=BIGINT}, #{tmallPlayActivityInfo,jdbcType=VARCHAR}, 
+      #{tmallPlayActivityStartTime,jdbcType=BIGINT}, #{totalStock,jdbcType=BIGINT}, #{userType,jdbcType=BIGINT}, 
+      #{uvSumPreSale,jdbcType=BIGINT}, #{volume,jdbcType=BIGINT}, #{whiteImage,jdbcType=VARCHAR}, 
+      #{wordList,jdbcType=VARCHAR}, #{xId,jdbcType=VARCHAR}, #{ysylClickUrl,jdbcType=VARCHAR}, 
+      #{ysylCommissionRate,jdbcType=VARCHAR}, #{ysylTljFace,jdbcType=VARCHAR}, #{ysylTljSendTime,jdbcType=VARCHAR}, 
+      #{ysylTljUseEndTime,jdbcType=VARCHAR}, #{ysylTljUseStartTime,jdbcType=VARCHAR}, 
+      #{zkFinalPrice,jdbcType=VARCHAR}, #{createTime,jdbcType=BIGINT}, #{updateTime,jdbcType=BIGINT}, 
+      #{materialId,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.najia.quan.taobao.model.ProductSelected" >
+    insert into product_selected
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="selectedId != null" >
+        selected_id,
+      </if>
+      <if test="categoryId != null" >
+        category_id,
+      </if>
+      <if test="categoryName != null" >
+        category_name,
+      </if>
+      <if test="clickUrl != null" >
+        click_url,
+      </if>
+      <if test="commissionRate != null" >
+        commission_rate,
+      </if>
+      <if test="couponAmount != null" >
+        coupon_amount,
+      </if>
+      <if test="couponEndTime != null" >
+        coupon_end_time,
+      </if>
+      <if test="couponInfo != null" >
+        coupon_info,
+      </if>
+      <if test="couponRemainCount != null" >
+        coupon_remain_count,
+      </if>
+      <if test="couponShareUrl != null" >
+        coupon_share_url,
+      </if>
+      <if test="couponStartFee != null" >
+        coupon_start_fee,
+      </if>
+      <if test="couponStartTime != null" >
+        coupon_start_time,
+      </if>
+      <if test="couponTotalCount != null" >
+        coupon_total_count,
+      </if>
+      <if test="favoritesInfo != null" >
+        favorites_info,
+      </if>
+      <if test="itemDescription != null" >
+        item_description,
+      </if>
+      <if test="itemId != null" >
+        item_id,
+      </if>
+      <if test="jddNum != null" >
+        jdd_num,
+      </if>
+      <if test="jddPrice != null" >
+        jdd_price,
+      </if>
+      <if test="jhsPriceUspList != null" >
+        jhs_price_usp_list,
+      </if>
+      <if test="juOnlineEndTime != null" >
+        ju_online_end_time,
+      </if>
+      <if test="juOnlineStartTime != null" >
+        ju_online_start_time,
+      </if>
+      <if test="juPlayEndTime != null" >
+        ju_play_end_time,
+      </if>
+      <if test="juPlayStartTime != null" >
+        ju_play_start_time,
+      </if>
+      <if test="juPreShowEndTime != null" >
+        ju_pre_show_end_time,
+      </if>
+      <if test="juPreShowStartTime != null" >
+        ju_pre_show_start_time,
+      </if>
+      <if test="kuadianPromotionInfo != null" >
+        kuadian_promotion_info,
+      </if>
+      <if test="levelOneCategoryId != null" >
+        level_one_category_id,
+      </if>
+      <if test="levelOneCategoryName != null" >
+        level_one_category_name,
+      </if>
+      <if test="lockRate != null" >
+        lock_rate,
+      </if>
+      <if test="lockRateEndTime != null" >
+        lock_rate_end_time,
+      </if>
+      <if test="lockRateStartTime != null" >
+        lock_rate_start_time,
+      </if>
+      <if test="maochaoPlayConditions != null" >
+        maochao_play_conditions,
+      </if>
+      <if test="maochaoPlayDiscountType != null" >
+        maochao_play_discount_type,
+      </if>
+      <if test="maochaoPlayDiscounts != null" >
+        maochao_play_discounts,
+      </if>
+      <if test="maochaoPlayEndTime != null" >
+        maochao_play_end_time,
+      </if>
+      <if test="maochaoPlayFreePostFee != null" >
+        maochao_play_free_post_fee,
+      </if>
+      <if test="maochaoPlayStartTime != null" >
+        maochao_play_start_time,
+      </if>
+      <if test="multiCouponItemCount != null" >
+        multi_coupon_item_count,
+      </if>
+      <if test="multiCouponZkRate != null" >
+        multi_coupon_zk_rate,
+      </if>
+      <if test="newUserPrice != null" >
+        new_user_price,
+      </if>
+      <if test="nick != null" >
+        nick,
+      </if>
+      <if test="oetime != null" >
+        oetime,
+      </if>
+      <if test="origPrice != null" >
+        orig_price,
+      </if>
+      <if test="ostime != null" >
+        ostime,
+      </if>
+      <if test="pictUrl != null" >
+        pict_url,
+      </if>
+      <if test="playInfo != null" >
+        play_info,
+      </if>
+      <if test="presaleDeposit != null" >
+        presale_deposit,
+      </if>
+      <if test="presaleDiscountFeeText != null" >
+        presale_discount_fee_text,
+      </if>
+      <if test="presaleEndTime != null" >
+        presale_end_time,
+      </if>
+      <if test="presaleStartTime != null" >
+        presale_start_time,
+      </if>
+      <if test="presaleTailEndTime != null" >
+        presale_tail_end_time,
+      </if>
+      <if test="presaleTailStartTime != null" >
+        presale_tail_start_time,
+      </if>
+      <if test="priceAfterMultiCoupon != null" >
+        price_after_multi_coupon,
+      </if>
+      <if test="promotionCondition != null" >
+        promotion_condition,
+      </if>
+      <if test="promotionDiscount != null" >
+        promotion_discount,
+      </if>
+      <if test="promotionInfo != null" >
+        promotion_info,
+      </if>
+      <if test="promotionType != null" >
+        promotion_type,
+      </if>
+      <if test="reservePrice != null" >
+        reserve_price,
+      </if>
+      <if test="salePrice != null" >
+        sale_price,
+      </if>
+      <if test="sellNum != null" >
+        sell_num,
+      </if>
+      <if test="sellerId != null" >
+        seller_id,
+      </if>
+      <if test="shopTitle != null" >
+        shop_title,
+      </if>
+      <if test="shortTitle != null" >
+        short_title,
+      </if>
+      <if test="smallImages != null" >
+        small_images,
+      </if>
+      <if test="stock != null" >
+        stock,
+      </if>
+      <if test="subTitle != null" >
+        sub_title,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="tmallPlayActivityEndTime != null" >
+        tmall_play_activity_end_time,
+      </if>
+      <if test="tmallPlayActivityInfo != null" >
+        tmall_play_activity_info,
+      </if>
+      <if test="tmallPlayActivityStartTime != null" >
+        tmall_play_activity_start_time,
+      </if>
+      <if test="totalStock != null" >
+        total_stock,
+      </if>
+      <if test="userType != null" >
+        user_type,
+      </if>
+      <if test="uvSumPreSale != null" >
+        uv_sum_pre_sale,
+      </if>
+      <if test="volume != null" >
+        volume,
+      </if>
+      <if test="whiteImage != null" >
+        white_image,
+      </if>
+      <if test="wordList != null" >
+        word_list,
+      </if>
+      <if test="xId != null" >
+        x_id,
+      </if>
+      <if test="ysylClickUrl != null" >
+        ysyl_click_url,
+      </if>
+      <if test="ysylCommissionRate != null" >
+        ysyl_commission_rate,
+      </if>
+      <if test="ysylTljFace != null" >
+        ysyl_tlj_face,
+      </if>
+      <if test="ysylTljSendTime != null" >
+        ysyl_tlj_send_time,
+      </if>
+      <if test="ysylTljUseEndTime != null" >
+        ysyl_tlj_use_end_time,
+      </if>
+      <if test="ysylTljUseStartTime != null" >
+        ysyl_tlj_use_start_time,
+      </if>
+      <if test="zkFinalPrice != null" >
+        zk_final_price,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="materialId != null" >
+        material_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="selectedId != null" >
+        #{selectedId,jdbcType=INTEGER},
+      </if>
+      <if test="categoryId != null" >
+        #{categoryId,jdbcType=BIGINT},
+      </if>
+      <if test="categoryName != null" >
+        #{categoryName,jdbcType=VARCHAR},
+      </if>
+      <if test="clickUrl != null" >
+        #{clickUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="commissionRate != null" >
+        #{commissionRate,jdbcType=VARCHAR},
+      </if>
+      <if test="couponAmount != null" >
+        #{couponAmount,jdbcType=BIGINT},
+      </if>
+      <if test="couponEndTime != null" >
+        #{couponEndTime,jdbcType=VARCHAR},
+      </if>
+      <if test="couponInfo != null" >
+        #{couponInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="couponRemainCount != null" >
+        #{couponRemainCount,jdbcType=BIGINT},
+      </if>
+      <if test="couponShareUrl != null" >
+        #{couponShareUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="couponStartFee != null" >
+        #{couponStartFee,jdbcType=VARCHAR},
+      </if>
+      <if test="couponStartTime != null" >
+        #{couponStartTime,jdbcType=VARCHAR},
+      </if>
+      <if test="couponTotalCount != null" >
+        #{couponTotalCount,jdbcType=BIGINT},
+      </if>
+      <if test="favoritesInfo != null" >
+        #{favoritesInfo,jdbcType=INTEGER},
+      </if>
+      <if test="itemDescription != null" >
+        #{itemDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="itemId != null" >
+        #{itemId,jdbcType=BIGINT},
+      </if>
+      <if test="jddNum != null" >
+        #{jddNum,jdbcType=BIGINT},
+      </if>
+      <if test="jddPrice != null" >
+        #{jddPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="jhsPriceUspList != null" >
+        #{jhsPriceUspList,jdbcType=VARCHAR},
+      </if>
+      <if test="juOnlineEndTime != null" >
+        #{juOnlineEndTime,jdbcType=VARCHAR},
+      </if>
+      <if test="juOnlineStartTime != null" >
+        #{juOnlineStartTime,jdbcType=VARCHAR},
+      </if>
+      <if test="juPlayEndTime != null" >
+        #{juPlayEndTime,jdbcType=BIGINT},
+      </if>
+      <if test="juPlayStartTime != null" >
+        #{juPlayStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="juPreShowEndTime != null" >
+        #{juPreShowEndTime,jdbcType=VARCHAR},
+      </if>
+      <if test="juPreShowStartTime != null" >
+        #{juPreShowStartTime,jdbcType=VARCHAR},
+      </if>
+      <if test="kuadianPromotionInfo != null" >
+        #{kuadianPromotionInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="levelOneCategoryId != null" >
+        #{levelOneCategoryId,jdbcType=BIGINT},
+      </if>
+      <if test="levelOneCategoryName != null" >
+        #{levelOneCategoryName,jdbcType=VARCHAR},
+      </if>
+      <if test="lockRate != null" >
+        #{lockRate,jdbcType=VARCHAR},
+      </if>
+      <if test="lockRateEndTime != null" >
+        #{lockRateEndTime,jdbcType=BIGINT},
+      </if>
+      <if test="lockRateStartTime != null" >
+        #{lockRateStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="maochaoPlayConditions != null" >
+        #{maochaoPlayConditions,jdbcType=VARCHAR},
+      </if>
+      <if test="maochaoPlayDiscountType != null" >
+        #{maochaoPlayDiscountType,jdbcType=VARCHAR},
+      </if>
+      <if test="maochaoPlayDiscounts != null" >
+        #{maochaoPlayDiscounts,jdbcType=VARCHAR},
+      </if>
+      <if test="maochaoPlayEndTime != null" >
+        #{maochaoPlayEndTime,jdbcType=VARCHAR},
+      </if>
+      <if test="maochaoPlayFreePostFee != null" >
+        #{maochaoPlayFreePostFee,jdbcType=VARCHAR},
+      </if>
+      <if test="maochaoPlayStartTime != null" >
+        #{maochaoPlayStartTime,jdbcType=VARCHAR},
+      </if>
+      <if test="multiCouponItemCount != null" >
+        #{multiCouponItemCount,jdbcType=VARCHAR},
+      </if>
+      <if test="multiCouponZkRate != null" >
+        #{multiCouponZkRate,jdbcType=VARCHAR},
+      </if>
+      <if test="newUserPrice != null" >
+        #{newUserPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="nick != null" >
+        #{nick,jdbcType=VARCHAR},
+      </if>
+      <if test="oetime != null" >
+        #{oetime,jdbcType=VARCHAR},
+      </if>
+      <if test="origPrice != null" >
+        #{origPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="ostime != null" >
+        #{ostime,jdbcType=VARCHAR},
+      </if>
+      <if test="pictUrl != null" >
+        #{pictUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="playInfo != null" >
+        #{playInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="presaleDeposit != null" >
+        #{presaleDeposit,jdbcType=VARCHAR},
+      </if>
+      <if test="presaleDiscountFeeText != null" >
+        #{presaleDiscountFeeText,jdbcType=VARCHAR},
+      </if>
+      <if test="presaleEndTime != null" >
+        #{presaleEndTime,jdbcType=BIGINT},
+      </if>
+      <if test="presaleStartTime != null" >
+        #{presaleStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="presaleTailEndTime != null" >
+        #{presaleTailEndTime,jdbcType=BIGINT},
+      </if>
+      <if test="presaleTailStartTime != null" >
+        #{presaleTailStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="priceAfterMultiCoupon != null" >
+        #{priceAfterMultiCoupon,jdbcType=VARCHAR},
+      </if>
+      <if test="promotionCondition != null" >
+        #{promotionCondition,jdbcType=VARCHAR},
+      </if>
+      <if test="promotionDiscount != null" >
+        #{promotionDiscount,jdbcType=VARCHAR},
+      </if>
+      <if test="promotionInfo != null" >
+        #{promotionInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="promotionType != null" >
+        #{promotionType,jdbcType=VARCHAR},
+      </if>
+      <if test="reservePrice != null" >
+        #{reservePrice,jdbcType=VARCHAR},
+      </if>
+      <if test="salePrice != null" >
+        #{salePrice,jdbcType=VARCHAR},
+      </if>
+      <if test="sellNum != null" >
+        #{sellNum,jdbcType=BIGINT},
+      </if>
+      <if test="sellerId != null" >
+        #{sellerId,jdbcType=BIGINT},
+      </if>
+      <if test="shopTitle != null" >
+        #{shopTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="shortTitle != null" >
+        #{shortTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="smallImages != null" >
+        #{smallImages,jdbcType=VARCHAR},
+      </if>
+      <if test="stock != null" >
+        #{stock,jdbcType=BIGINT},
+      </if>
+      <if test="subTitle != null" >
+        #{subTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="tmallPlayActivityEndTime != null" >
+        #{tmallPlayActivityEndTime,jdbcType=BIGINT},
+      </if>
+      <if test="tmallPlayActivityInfo != null" >
+        #{tmallPlayActivityInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="tmallPlayActivityStartTime != null" >
+        #{tmallPlayActivityStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="totalStock != null" >
+        #{totalStock,jdbcType=BIGINT},
+      </if>
+      <if test="userType != null" >
+        #{userType,jdbcType=BIGINT},
+      </if>
+      <if test="uvSumPreSale != null" >
+        #{uvSumPreSale,jdbcType=BIGINT},
+      </if>
+      <if test="volume != null" >
+        #{volume,jdbcType=BIGINT},
+      </if>
+      <if test="whiteImage != null" >
+        #{whiteImage,jdbcType=VARCHAR},
+      </if>
+      <if test="wordList != null" >
+        #{wordList,jdbcType=VARCHAR},
+      </if>
+      <if test="xId != null" >
+        #{xId,jdbcType=VARCHAR},
+      </if>
+      <if test="ysylClickUrl != null" >
+        #{ysylClickUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="ysylCommissionRate != null" >
+        #{ysylCommissionRate,jdbcType=VARCHAR},
+      </if>
+      <if test="ysylTljFace != null" >
+        #{ysylTljFace,jdbcType=VARCHAR},
+      </if>
+      <if test="ysylTljSendTime != null" >
+        #{ysylTljSendTime,jdbcType=VARCHAR},
+      </if>
+      <if test="ysylTljUseEndTime != null" >
+        #{ysylTljUseEndTime,jdbcType=VARCHAR},
+      </if>
+      <if test="ysylTljUseStartTime != null" >
+        #{ysylTljUseStartTime,jdbcType=VARCHAR},
+      </if>
+      <if test="zkFinalPrice != null" >
+        #{zkFinalPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=BIGINT},
+      </if>
+      <if test="materialId != null" >
+        #{materialId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.najia.quan.taobao.model.ProductSelected" >
+    update product_selected
+    <set >
+      <if test="categoryId != null" >
+        category_id = #{categoryId,jdbcType=BIGINT},
+      </if>
+      <if test="categoryName != null" >
+        category_name = #{categoryName,jdbcType=VARCHAR},
+      </if>
+      <if test="clickUrl != null" >
+        click_url = #{clickUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="commissionRate != null" >
+        commission_rate = #{commissionRate,jdbcType=VARCHAR},
+      </if>
+      <if test="couponAmount != null" >
+        coupon_amount = #{couponAmount,jdbcType=BIGINT},
+      </if>
+      <if test="couponEndTime != null" >
+        coupon_end_time = #{couponEndTime,jdbcType=VARCHAR},
+      </if>
+      <if test="couponInfo != null" >
+        coupon_info = #{couponInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="couponRemainCount != null" >
+        coupon_remain_count = #{couponRemainCount,jdbcType=BIGINT},
+      </if>
+      <if test="couponShareUrl != null" >
+        coupon_share_url = #{couponShareUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="couponStartFee != null" >
+        coupon_start_fee = #{couponStartFee,jdbcType=VARCHAR},
+      </if>
+      <if test="couponStartTime != null" >
+        coupon_start_time = #{couponStartTime,jdbcType=VARCHAR},
+      </if>
+      <if test="couponTotalCount != null" >
+        coupon_total_count = #{couponTotalCount,jdbcType=BIGINT},
+      </if>
+      <if test="favoritesInfo != null" >
+        favorites_info = #{favoritesInfo,jdbcType=INTEGER},
+      </if>
+      <if test="itemDescription != null" >
+        item_description = #{itemDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="itemId != null" >
+        item_id = #{itemId,jdbcType=BIGINT},
+      </if>
+      <if test="jddNum != null" >
+        jdd_num = #{jddNum,jdbcType=BIGINT},
+      </if>
+      <if test="jddPrice != null" >
+        jdd_price = #{jddPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="jhsPriceUspList != null" >
+        jhs_price_usp_list = #{jhsPriceUspList,jdbcType=VARCHAR},
+      </if>
+      <if test="juOnlineEndTime != null" >
+        ju_online_end_time = #{juOnlineEndTime,jdbcType=VARCHAR},
+      </if>
+      <if test="juOnlineStartTime != null" >
+        ju_online_start_time = #{juOnlineStartTime,jdbcType=VARCHAR},
+      </if>
+      <if test="juPlayEndTime != null" >
+        ju_play_end_time = #{juPlayEndTime,jdbcType=BIGINT},
+      </if>
+      <if test="juPlayStartTime != null" >
+        ju_play_start_time = #{juPlayStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="juPreShowEndTime != null" >
+        ju_pre_show_end_time = #{juPreShowEndTime,jdbcType=VARCHAR},
+      </if>
+      <if test="juPreShowStartTime != null" >
+        ju_pre_show_start_time = #{juPreShowStartTime,jdbcType=VARCHAR},
+      </if>
+      <if test="kuadianPromotionInfo != null" >
+        kuadian_promotion_info = #{kuadianPromotionInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="levelOneCategoryId != null" >
+        level_one_category_id = #{levelOneCategoryId,jdbcType=BIGINT},
+      </if>
+      <if test="levelOneCategoryName != null" >
+        level_one_category_name = #{levelOneCategoryName,jdbcType=VARCHAR},
+      </if>
+      <if test="lockRate != null" >
+        lock_rate = #{lockRate,jdbcType=VARCHAR},
+      </if>
+      <if test="lockRateEndTime != null" >
+        lock_rate_end_time = #{lockRateEndTime,jdbcType=BIGINT},
+      </if>
+      <if test="lockRateStartTime != null" >
+        lock_rate_start_time = #{lockRateStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="maochaoPlayConditions != null" >
+        maochao_play_conditions = #{maochaoPlayConditions,jdbcType=VARCHAR},
+      </if>
+      <if test="maochaoPlayDiscountType != null" >
+        maochao_play_discount_type = #{maochaoPlayDiscountType,jdbcType=VARCHAR},
+      </if>
+      <if test="maochaoPlayDiscounts != null" >
+        maochao_play_discounts = #{maochaoPlayDiscounts,jdbcType=VARCHAR},
+      </if>
+      <if test="maochaoPlayEndTime != null" >
+        maochao_play_end_time = #{maochaoPlayEndTime,jdbcType=VARCHAR},
+      </if>
+      <if test="maochaoPlayFreePostFee != null" >
+        maochao_play_free_post_fee = #{maochaoPlayFreePostFee,jdbcType=VARCHAR},
+      </if>
+      <if test="maochaoPlayStartTime != null" >
+        maochao_play_start_time = #{maochaoPlayStartTime,jdbcType=VARCHAR},
+      </if>
+      <if test="multiCouponItemCount != null" >
+        multi_coupon_item_count = #{multiCouponItemCount,jdbcType=VARCHAR},
+      </if>
+      <if test="multiCouponZkRate != null" >
+        multi_coupon_zk_rate = #{multiCouponZkRate,jdbcType=VARCHAR},
+      </if>
+      <if test="newUserPrice != null" >
+        new_user_price = #{newUserPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="nick != null" >
+        nick = #{nick,jdbcType=VARCHAR},
+      </if>
+      <if test="oetime != null" >
+        oetime = #{oetime,jdbcType=VARCHAR},
+      </if>
+      <if test="origPrice != null" >
+        orig_price = #{origPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="ostime != null" >
+        ostime = #{ostime,jdbcType=VARCHAR},
+      </if>
+      <if test="pictUrl != null" >
+        pict_url = #{pictUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="playInfo != null" >
+        play_info = #{playInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="presaleDeposit != null" >
+        presale_deposit = #{presaleDeposit,jdbcType=VARCHAR},
+      </if>
+      <if test="presaleDiscountFeeText != null" >
+        presale_discount_fee_text = #{presaleDiscountFeeText,jdbcType=VARCHAR},
+      </if>
+      <if test="presaleEndTime != null" >
+        presale_end_time = #{presaleEndTime,jdbcType=BIGINT},
+      </if>
+      <if test="presaleStartTime != null" >
+        presale_start_time = #{presaleStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="presaleTailEndTime != null" >
+        presale_tail_end_time = #{presaleTailEndTime,jdbcType=BIGINT},
+      </if>
+      <if test="presaleTailStartTime != null" >
+        presale_tail_start_time = #{presaleTailStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="priceAfterMultiCoupon != null" >
+        price_after_multi_coupon = #{priceAfterMultiCoupon,jdbcType=VARCHAR},
+      </if>
+      <if test="promotionCondition != null" >
+        promotion_condition = #{promotionCondition,jdbcType=VARCHAR},
+      </if>
+      <if test="promotionDiscount != null" >
+        promotion_discount = #{promotionDiscount,jdbcType=VARCHAR},
+      </if>
+      <if test="promotionInfo != null" >
+        promotion_info = #{promotionInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="promotionType != null" >
+        promotion_type = #{promotionType,jdbcType=VARCHAR},
+      </if>
+      <if test="reservePrice != null" >
+        reserve_price = #{reservePrice,jdbcType=VARCHAR},
+      </if>
+      <if test="salePrice != null" >
+        sale_price = #{salePrice,jdbcType=VARCHAR},
+      </if>
+      <if test="sellNum != null" >
+        sell_num = #{sellNum,jdbcType=BIGINT},
+      </if>
+      <if test="sellerId != null" >
+        seller_id = #{sellerId,jdbcType=BIGINT},
+      </if>
+      <if test="shopTitle != null" >
+        shop_title = #{shopTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="shortTitle != null" >
+        short_title = #{shortTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="smallImages != null" >
+        small_images = #{smallImages,jdbcType=VARCHAR},
+      </if>
+      <if test="stock != null" >
+        stock = #{stock,jdbcType=BIGINT},
+      </if>
+      <if test="subTitle != null" >
+        sub_title = #{subTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="tmallPlayActivityEndTime != null" >
+        tmall_play_activity_end_time = #{tmallPlayActivityEndTime,jdbcType=BIGINT},
+      </if>
+      <if test="tmallPlayActivityInfo != null" >
+        tmall_play_activity_info = #{tmallPlayActivityInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="tmallPlayActivityStartTime != null" >
+        tmall_play_activity_start_time = #{tmallPlayActivityStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="totalStock != null" >
+        total_stock = #{totalStock,jdbcType=BIGINT},
+      </if>
+      <if test="userType != null" >
+        user_type = #{userType,jdbcType=BIGINT},
+      </if>
+      <if test="uvSumPreSale != null" >
+        uv_sum_pre_sale = #{uvSumPreSale,jdbcType=BIGINT},
+      </if>
+      <if test="volume != null" >
+        volume = #{volume,jdbcType=BIGINT},
+      </if>
+      <if test="whiteImage != null" >
+        white_image = #{whiteImage,jdbcType=VARCHAR},
+      </if>
+      <if test="wordList != null" >
+        word_list = #{wordList,jdbcType=VARCHAR},
+      </if>
+      <if test="xId != null" >
+        x_id = #{xId,jdbcType=VARCHAR},
+      </if>
+      <if test="ysylClickUrl != null" >
+        ysyl_click_url = #{ysylClickUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="ysylCommissionRate != null" >
+        ysyl_commission_rate = #{ysylCommissionRate,jdbcType=VARCHAR},
+      </if>
+      <if test="ysylTljFace != null" >
+        ysyl_tlj_face = #{ysylTljFace,jdbcType=VARCHAR},
+      </if>
+      <if test="ysylTljSendTime != null" >
+        ysyl_tlj_send_time = #{ysylTljSendTime,jdbcType=VARCHAR},
+      </if>
+      <if test="ysylTljUseEndTime != null" >
+        ysyl_tlj_use_end_time = #{ysylTljUseEndTime,jdbcType=VARCHAR},
+      </if>
+      <if test="ysylTljUseStartTime != null" >
+        ysyl_tlj_use_start_time = #{ysylTljUseStartTime,jdbcType=VARCHAR},
+      </if>
+      <if test="zkFinalPrice != null" >
+        zk_final_price = #{zkFinalPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=BIGINT},
+      </if>
+      <if test="materialId != null" >
+        material_id = #{materialId,jdbcType=BIGINT},
+      </if>
+    </set>
+    where selected_id = #{selectedId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.najia.quan.taobao.model.ProductSelected" >
+    update product_selected
+    set category_id = #{categoryId,jdbcType=BIGINT},
+      category_name = #{categoryName,jdbcType=VARCHAR},
+      click_url = #{clickUrl,jdbcType=VARCHAR},
+      commission_rate = #{commissionRate,jdbcType=VARCHAR},
+      coupon_amount = #{couponAmount,jdbcType=BIGINT},
+      coupon_end_time = #{couponEndTime,jdbcType=VARCHAR},
+      coupon_info = #{couponInfo,jdbcType=VARCHAR},
+      coupon_remain_count = #{couponRemainCount,jdbcType=BIGINT},
+      coupon_share_url = #{couponShareUrl,jdbcType=VARCHAR},
+      coupon_start_fee = #{couponStartFee,jdbcType=VARCHAR},
+      coupon_start_time = #{couponStartTime,jdbcType=VARCHAR},
+      coupon_total_count = #{couponTotalCount,jdbcType=BIGINT},
+      favorites_info = #{favoritesInfo,jdbcType=INTEGER},
+      item_description = #{itemDescription,jdbcType=VARCHAR},
+      item_id = #{itemId,jdbcType=BIGINT},
+      jdd_num = #{jddNum,jdbcType=BIGINT},
+      jdd_price = #{jddPrice,jdbcType=VARCHAR},
+      jhs_price_usp_list = #{jhsPriceUspList,jdbcType=VARCHAR},
+      ju_online_end_time = #{juOnlineEndTime,jdbcType=VARCHAR},
+      ju_online_start_time = #{juOnlineStartTime,jdbcType=VARCHAR},
+      ju_play_end_time = #{juPlayEndTime,jdbcType=BIGINT},
+      ju_play_start_time = #{juPlayStartTime,jdbcType=BIGINT},
+      ju_pre_show_end_time = #{juPreShowEndTime,jdbcType=VARCHAR},
+      ju_pre_show_start_time = #{juPreShowStartTime,jdbcType=VARCHAR},
+      kuadian_promotion_info = #{kuadianPromotionInfo,jdbcType=VARCHAR},
+      level_one_category_id = #{levelOneCategoryId,jdbcType=BIGINT},
+      level_one_category_name = #{levelOneCategoryName,jdbcType=VARCHAR},
+      lock_rate = #{lockRate,jdbcType=VARCHAR},
+      lock_rate_end_time = #{lockRateEndTime,jdbcType=BIGINT},
+      lock_rate_start_time = #{lockRateStartTime,jdbcType=BIGINT},
+      maochao_play_conditions = #{maochaoPlayConditions,jdbcType=VARCHAR},
+      maochao_play_discount_type = #{maochaoPlayDiscountType,jdbcType=VARCHAR},
+      maochao_play_discounts = #{maochaoPlayDiscounts,jdbcType=VARCHAR},
+      maochao_play_end_time = #{maochaoPlayEndTime,jdbcType=VARCHAR},
+      maochao_play_free_post_fee = #{maochaoPlayFreePostFee,jdbcType=VARCHAR},
+      maochao_play_start_time = #{maochaoPlayStartTime,jdbcType=VARCHAR},
+      multi_coupon_item_count = #{multiCouponItemCount,jdbcType=VARCHAR},
+      multi_coupon_zk_rate = #{multiCouponZkRate,jdbcType=VARCHAR},
+      new_user_price = #{newUserPrice,jdbcType=VARCHAR},
+      nick = #{nick,jdbcType=VARCHAR},
+      oetime = #{oetime,jdbcType=VARCHAR},
+      orig_price = #{origPrice,jdbcType=VARCHAR},
+      ostime = #{ostime,jdbcType=VARCHAR},
+      pict_url = #{pictUrl,jdbcType=VARCHAR},
+      play_info = #{playInfo,jdbcType=VARCHAR},
+      presale_deposit = #{presaleDeposit,jdbcType=VARCHAR},
+      presale_discount_fee_text = #{presaleDiscountFeeText,jdbcType=VARCHAR},
+      presale_end_time = #{presaleEndTime,jdbcType=BIGINT},
+      presale_start_time = #{presaleStartTime,jdbcType=BIGINT},
+      presale_tail_end_time = #{presaleTailEndTime,jdbcType=BIGINT},
+      presale_tail_start_time = #{presaleTailStartTime,jdbcType=BIGINT},
+      price_after_multi_coupon = #{priceAfterMultiCoupon,jdbcType=VARCHAR},
+      promotion_condition = #{promotionCondition,jdbcType=VARCHAR},
+      promotion_discount = #{promotionDiscount,jdbcType=VARCHAR},
+      promotion_info = #{promotionInfo,jdbcType=VARCHAR},
+      promotion_type = #{promotionType,jdbcType=VARCHAR},
+      reserve_price = #{reservePrice,jdbcType=VARCHAR},
+      sale_price = #{salePrice,jdbcType=VARCHAR},
+      sell_num = #{sellNum,jdbcType=BIGINT},
+      seller_id = #{sellerId,jdbcType=BIGINT},
+      shop_title = #{shopTitle,jdbcType=VARCHAR},
+      short_title = #{shortTitle,jdbcType=VARCHAR},
+      small_images = #{smallImages,jdbcType=VARCHAR},
+      stock = #{stock,jdbcType=BIGINT},
+      sub_title = #{subTitle,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      tmall_play_activity_end_time = #{tmallPlayActivityEndTime,jdbcType=BIGINT},
+      tmall_play_activity_info = #{tmallPlayActivityInfo,jdbcType=VARCHAR},
+      tmall_play_activity_start_time = #{tmallPlayActivityStartTime,jdbcType=BIGINT},
+      total_stock = #{totalStock,jdbcType=BIGINT},
+      user_type = #{userType,jdbcType=BIGINT},
+      uv_sum_pre_sale = #{uvSumPreSale,jdbcType=BIGINT},
+      volume = #{volume,jdbcType=BIGINT},
+      white_image = #{whiteImage,jdbcType=VARCHAR},
+      word_list = #{wordList,jdbcType=VARCHAR},
+      x_id = #{xId,jdbcType=VARCHAR},
+      ysyl_click_url = #{ysylClickUrl,jdbcType=VARCHAR},
+      ysyl_commission_rate = #{ysylCommissionRate,jdbcType=VARCHAR},
+      ysyl_tlj_face = #{ysylTljFace,jdbcType=VARCHAR},
+      ysyl_tlj_send_time = #{ysylTljSendTime,jdbcType=VARCHAR},
+      ysyl_tlj_use_end_time = #{ysylTljUseEndTime,jdbcType=VARCHAR},
+      ysyl_tlj_use_start_time = #{ysylTljUseStartTime,jdbcType=VARCHAR},
+      zk_final_price = #{zkFinalPrice,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=BIGINT},
+      update_time = #{updateTime,jdbcType=BIGINT},
+      material_id = #{materialId,jdbcType=BIGINT}
+    where selected_id = #{selectedId,jdbcType=INTEGER}
+  </update>
+</mapper>

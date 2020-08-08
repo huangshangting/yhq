@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.najia.quan.taobao.mapperOwn.ProductSelectedMapperOwn" >
+    <select id="selectByItemId" parameterType="java.lang.Long" resultType="java.lang.Integer">
+        select selected_id
+        from product_selected
+        where item_id = #{itemId}
+    </select>
+
+    <select id="selectByMaterialId" parameterType="java.lang.Long" resultMap="com.najia.quan.taobao.mapper.ProductSelectedMapper.BaseResultMap">
+        select selected_id,category_id,coupon_share_url,nick,pict_url,title,material_id,coupon_remain_count,coupon_share_url,
+        coupon_amount
+        from product_selected
+        where material_id = #{materialId}
+        and coupon_share_url is not null
+        order by coupon_amount desc
+    </select>
+</mapper>
